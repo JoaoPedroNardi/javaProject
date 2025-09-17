@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             dots.forEach((dot, i) => dot.classList.toggle('active', i === currentSlide));
         }
         
+        // Limpa os pontos existentes antes de criar novos para evitar duplicação
+        dotsContainer.innerHTML = ''; 
         slides.forEach((_, i) => {
             const button = document.createElement('button');
             button.addEventListener('click', () => {
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dotsContainer.appendChild(button);
         });
 
-        if(dotsContainer.firstChild) {
+        if (dotsContainer.firstChild) {
             dotsContainer.firstChild.classList.add('active');
         }
 
@@ -88,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Funcionalidade das Abas (Tabs)
-     * Executa apenas se encontrar o elemento '.tabs-container' (na cliente.html)
+     * Executa apenas se encontrar o elemento '.tabs-container' (nas páginas de painel)
      */
     const tabsContainer = document.querySelector('.tabs-container');
     if (tabsContainer) {

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador - Biblioteca Clássica</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="page-panel">
+    <div class="container">
+        <header class="page-header">
+            <h1>Painel do Administrador</h1>
+            <p>Gerencie todos os aspectos da biblioteca: empréstimos, multas, clientes, livros, funcionários e sistema.</p>
+        </header>
+
+        <div class="tabs-container">
+            <div class="tabs-list">
+                <button class="tabs-trigger active" data-tab="emprestimos">Empréstimos</button>
+                <button class="tabs-trigger" data-tab="multas">Multas</button>
+                <button class="tabs-trigger" data-tab="clientes">Clientes</button>
+                <button class="tabs-trigger" data-tab="avaliacoes">Avaliações</button>
+                <button class="tabs-trigger" data-tab="livros">Livros</button>
+                <button class="tabs-trigger" data-tab="funcionarios">Funcionários</button>
+                <button class="tabs-trigger" data-tab="informacoes">Minhas Informações</button>
+            </div>
+
+            <div id="tab-emprestimos" class="tabs-content active">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Gerenciar Empréstimos</h2>
+                        <div class="actions">
+                            <div class="search-wrapper">
+                                <input type="text" placeholder="Buscar em empréstimos..." class="search-input">
+                            </div>
+                            <button class="btn btn-literary btn-sm">Novo Empréstimo</button>
+                            <button class="btn btn-outline btn-sm">Relatórios</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Cliente</th>
+                                        <th>Livro</th>
+                                        <th>Datas</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>EMP001</td>
+                                        <td>Maria Silva Santos</td>
+                                        <td>Dom Quixote</td>
+                                        <td>15/03/2024 - 29/03/2024</td>
+                                        <td><span class="badge badge-default">Ativo</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>EMP002</td>
+                                        <td>João Pedro Oliveira</td>
+                                        <td>Hamlet</td>
+                                        <td>10/03/2024 - 24/03/2024</td>
+                                        <td><span class="badge badge-destructive">Atrasado</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>EMP003</td>
+                                        <td>Ana Costa Lima</td>
+                                        <td>O Cortiço</td>
+                                        <td>05/03/2024 - 19/03/2024</td>
+                                        <td><span class="badge badge-secondary">Devolvido</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-avaliacoes" class="tabs-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Gerenciar Avaliações</h2>
+                        <div class="actions">
+                            <div class="search-wrapper">
+                                <input type="text" placeholder="Buscar em avaliações..." class="search-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Livro</th>
+                                        <th>Cliente</th>
+                                        <th>Avaliação</th>
+                                        <th>Comentário</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dom Quixote</td>
+                                        <td>Maria Silva</td>
+                                        <td>
+                                            <div class="stars">
+                                                <span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span>
+                                            </div>
+                                        </td>
+                                        <td class="comment">Livro excepcional, uma obra-prima...</td>
+                                        <td><span class="badge badge-default">Aprovado</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hamlet</td>
+                                        <td>João Pedro</td>
+                                        <td>
+                                            <div class="stars">
+                                                <span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span>★</span>
+                                            </div>
+                                        </td>
+                                        <td class="comment">Muito bom, mas achei um pouco difícil...</td>
+                                        <td><span class="badge badge-secondary">Pendente</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></button>
+                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-multas" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Multas aqui.</p></div></div></div>
+            <div id="tab-clientes" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Clientes aqui.</p></div></div></div>
+            <div id="tab-livros" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Livros aqui.</p></div></div></div>
+            <div id="tab-funcionarios" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Funcionários aqui.</p></div></div></div>
+
+            <div id="tab-informacoes" class="tabs-content">
+                <div class="info-grid">
+                    <div class="card">
+                        <div class="card-header"><h2 class="card-title">Informações Pessoais</h2></div>
+                        <div class="card-content">
+                            <p><strong>Nome:</strong> Roberto Santos Oliveira</p>
+                            <p><strong>Email:</strong> roberto.admin@biblioteca.com</p>
+                            <p><strong>Cargo:</strong> Administrador do Sistema</p>
+                            <p><strong>Nível de Acesso:</strong> Total</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h2 class="card-title">Configurações do Sistema</h2></div>
+                        <div class="card-content">
+                           <p>Opções e botões para configurar o sistema.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/assets/js/script.js" defer></script>
+</body>
+</html>

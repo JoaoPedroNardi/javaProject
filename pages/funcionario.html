@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Funcionário - Biblioteca Clássica</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="page-panel">
+    <div class="container">
+        <header class="page-header">
+            <h1>Painel do Funcionário</h1>
+            <p>Gerencie empréstimos, multas, clientes e avaliações da biblioteca.</p>
+        </header>
+
+        <div class="tabs-container">
+            <div class="tabs-list">
+                <button class="tabs-trigger active" data-tab="emprestimos">Empréstimos</button>
+                <button class="tabs-trigger" data-tab="multas">Multas</button>
+                <button class="tabs-trigger" data-tab="clientes">Clientes</button>
+                <button class="tabs-trigger" data-tab="avaliacoes">Avaliações</button>
+                <button class="tabs-trigger" data-tab="informacoes">Minhas Informações</button>
+            </div>
+
+            <div id="tab-emprestimos" class="tabs-content active">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Gerenciar Empréstimos</h2>
+                        <div class="actions">
+                            <div class="search-wrapper">
+                                <input type="text" placeholder="Buscar por cliente, ID ou livro..." class="search-input">
+                            </div>
+                            <button class="btn btn-literary btn-sm">Novo Empréstimo</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Cliente</th>
+                                        <th>Livro</th>
+                                        <th>Datas</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>EMP001</td>
+                                        <td>Maria Silva Santos</td>
+                                        <td>Dom Quixote</td>
+                                        <td>15/03/2024 - 29/03/2024</td>
+                                        <td><span class="badge badge-default">Ativo</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-literary btn-sm">Renovar</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>EMP002</td>
+                                        <td>João Pedro Oliveira</td>
+                                        <td>Hamlet</td>
+                                        <td>10/03/2024 - 24/03/2024</td>
+                                        <td><span class="badge badge-destructive">Atrasado</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>EMP003</td>
+                                        <td>Ana Costa Lima</td>
+                                        <td>O Cortiço</td>
+                                        <td>05/03/2024 - 19/03/2024</td>
+                                        <td><span class="badge badge-secondary">Devolvido</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="tab-multas" class="tabs-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Gerenciar Multas</h2>
+                        <div class="actions">
+                             <div class="search-wrapper">
+                                <input type="text" placeholder="Buscar por cliente ou livro..." class="search-input">
+                            </div>
+                        </div>
+                    </div>
+                     <div class="card-content">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Cliente</th>
+                                        <th>Livro</th>
+                                        <th>Valor</th>
+                                        <th>Dias de Atraso</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MUL001</td>
+                                        <td>João Pedro Oliveira</td>
+                                        <td>Hamlet</td>
+                                        <td class="valor">R$ 15,00</td>
+                                        <td>5 dias</td>
+                                        <td><span class="badge badge-destructive">Pendente</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-literary btn-sm">Marcar como Pago</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>MUL002</td>
+                                        <td>Carlos Santos</td>
+                                        <td>Dom Casmurro</td>
+                                        <td class="valor">R$ 8,50</td>
+                                        <td>3 dias</td>
+                                        <td><span class="badge badge-secondary">Pago</span></td>
+                                         <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tab-clientes" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Clientes aqui.</p></div></div></div>
+            <div id="tab-avaliacoes" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Avaliações aqui.</p></div></div></div>
+
+            <div id="tab-informacoes" class="tabs-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Minhas Informações</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>Nome Completo</label>
+                                <p>Carlos Roberto Silva</p>
+                            </div>
+                            <div class="info-item">
+                                <label>E-mail</label>
+                                <p>carlos.silva@biblioteca.com</p>
+                            </div>
+                             <div class="info-item">
+                                <label>Telefone</label>
+                                <p>(11) 3333-4444</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Matrícula</label>
+                                <p>FUNC001</p>
+                            </div>
+                             <div class="info-item">
+                                <label>Cargo</label>
+                                <p>Bibliotecário Chefe</p>
+                            </div>
+                             <div class="info-item">
+                                <label>Departamento</label>
+                                <p>Gestão de Acervo</p>
+                            </div>
+                             <div class="info-item">
+                                <label>Data de Admissão</label>
+                                <p>15/01/2020</p>
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-literary">Editar Informações</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="/assets/js/script.js" defer></script>
+</body>
+</html>
