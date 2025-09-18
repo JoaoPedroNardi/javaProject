@@ -3,38 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel do Administrador - Biblioteca Clássica</title>
+    <title>Painel do Administrador - Livraria Clássica</title>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body class="page-panel">
     <div class="container">
+        <!-- CABEÇALHO DA PÁGINA -->
         <header class="page-header">
-            <h1>Painel do Administrador</h1>
-            <p>Gerencie todos os aspectos da biblioteca: empréstimos, multas, clientes, livros, funcionários e sistema.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h1>Painel do Administrador</h1>
+                    <p>Gerencie todos os aspectos da biblioteca: empréstimos, multas, clientes, livros, funcionários e sistema.</p>
+                </div>
+                <a href="/index.html" class="btn btn-outline">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+                    Voltar ao Início
+                </a>
+            </div>
         </header>
 
+        <!-- CONTAINER DAS ABAS -->
         <div class="tabs-container">
+            <!-- NAVEGAÇÃO DAS ABAS -->
             <div class="tabs-list">
-                <button class="tabs-trigger active" data-tab="emprestimos">Empréstimos</button>
-                <button class="tabs-trigger" data-tab="multas">Multas</button>
-                <button class="tabs-trigger" data-tab="clientes">Clientes</button>
-                <button class="tabs-trigger" data-tab="avaliacoes">Avaliações</button>
-                <button class="tabs-trigger" data-tab="livros">Livros</button>
-                <button class="tabs-trigger" data-tab="funcionarios">Funcionários</button>
-                <button class="tabs-trigger" data-tab="informacoes">Minhas Informações</button>
+                <button class="tabs-trigger active" data-tab="emprestimos">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                    Empréstimos
+                </button>
+                <button class="tabs-trigger" data-tab="multas">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    Multas
+                </button>
+                <button class="tabs-trigger" data-tab="clientes">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    Clientes
+                </button>
+                <button class="tabs-trigger" data-tab="avaliacoes">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Avaliações
+                </button>
+                <button class="tabs-trigger" data-tab="livros">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M20 22h-2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h2v18Z"/><path d="M16 22h-2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h2v18Z"/><path d="M12 22h-2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h2v18Z"/><path d="M8 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h2v18Z"/></svg>
+                    Livros
+                </button>
+                <button class="tabs-trigger" data-tab="funcionarios">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+                    Funcionários
+                </button>
+                <button class="tabs-trigger" data-tab="informacoes">
+                    <svg width="16" height="16" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Minhas Informações
+                </button>
             </div>
 
+            <!-- CONTEÚDO DA ABA: EMPRÉSTIMOS -->
             <div id="tab-emprestimos" class="tabs-content active">
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">Gerenciar Empréstimos</h2>
-                        <div class="actions">
-                            <div class="search-wrapper">
-                                <input type="text" placeholder="Buscar em empréstimos..." class="search-input">
-                            </div>
-                            <button class="btn btn-literary btn-sm">Novo Empréstimo</button>
-                            <button class="btn btn-outline btn-sm">Relatórios</button>
-                        </div>
                     </div>
                     <div class="card-content">
                         <div class="table-wrapper">
@@ -44,48 +71,44 @@
                                         <th>ID</th>
                                         <th>Cliente</th>
                                         <th>Livro</th>
-                                        <th>Datas</th>
                                         <th>Status</th>
                                         <th>Ações</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>EMP001</td>
+                                        <td><div class="subtext">EMP001</div></td>
                                         <td>Maria Silva Santos</td>
                                         <td>Dom Quixote</td>
-                                        <td>15/03/2024 - 29/03/2024</td>
-                                        <td><span class="badge badge-default">Ativo</span></td>
+                                        <td><span class="badge badge-ativo">Ativo</span></td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="btn btn-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
-                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>EMP002</td>
+                                        <td><div class="subtext">EMP002</div></td>
                                         <td>João Pedro Oliveira</td>
                                         <td>Hamlet</td>
-                                        <td>10/03/2024 - 24/03/2024</td>
-                                        <td><span class="badge badge-destructive">Atrasado</span></td>
+                                        <td><span class="badge badge-atrasado">Atrasado</span></td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="btn btn-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
-                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>EMP003</td>
+                                        <td><div class="subtext">EMP003</div></td>
                                         <td>Ana Costa Lima</td>
                                         <td>O Cortiço</td>
-                                        <td>05/03/2024 - 19/03/2024</td>
-                                        <td><span class="badge badge-secondary">Devolvido</span></td>
+                                        <td><span class="badge badge-devolvido">Devolvido</span></td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="btn btn-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
-                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -96,15 +119,126 @@
                 </div>
             </div>
 
-            <div id="tab-avaliacoes" class="tabs-content">
+            <!-- CONTEÚDO DA ABA: MULTAS -->
+            <div id="tab-multas" class="tabs-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Gerenciar Multas</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Cliente</th>
+                                        <th>Livro</th>
+                                        <th>Valor</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="subtext">MUL001</div></td>
+                                        <td>João Pedro Oliveira</td>
+                                        <td>Hamlet</td>
+                                        <td class="valor">R$ 15,00</td>
+                                        <td><span class="badge badge-pendencia">Pendente</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="subtext">MUL002</div></td>
+                                        <td>Carlos Santos</td>
+                                        <td>Dom Casmurro</td>
+                                        <td class="valor">R$ 8,50</td>
+                                        <td><span class="badge badge-pago">Pago</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTEÚDO DA ABA: CLIENTES -->
+            <div id="tab-clientes" class="tabs-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Gerenciar Clientes</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Contato</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="subtext">2024001234</div></td>
+                                        <td>Maria Silva Santos</td>
+                                        <td>maria.santos@email.com</td>
+                                        <td><span class="badge badge-ativo">Ativo</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="subtext">2024005678</div></td>
+                                        <td>João Pedro Oliveira</td>
+                                        <td>joao.pedro@email.com</td>
+                                        <td><span class="badge badge-pendencia">Pendência</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="subtext">2024009876</div></td>
+                                        <td>Ana Costa Lima</td>
+                                        <td>ana.costa@email.com</td>
+                                        <td><span class="badge badge-ativo">Ativo</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTEÚDO DA ABA: AVALIAÇÕES -->
+             <div id="tab-avaliacoes" class="tabs-content">
                 <div class="card">
                     <div class="card-header">
                         <h2 class="card-title">Gerenciar Avaliações</h2>
-                        <div class="actions">
-                            <div class="search-wrapper">
-                                <input type="text" placeholder="Buscar em avaliações..." class="search-input">
-                            </div>
-                        </div>
                     </div>
                     <div class="card-content">
                         <div class="table-wrapper">
@@ -123,33 +257,26 @@
                                     <tr>
                                         <td>Dom Quixote</td>
                                         <td>Maria Silva</td>
-                                        <td>
-                                            <div class="stars">
-                                                <span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span>
-                                            </div>
-                                        </td>
-                                        <td class="comment">Livro excepcional, uma obra-prima...</td>
-                                        <td><span class="badge badge-default">Aprovado</span></td>
+                                        <td><div class="stars"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span></div></td>
+                                        <td class="comment">Livro excepcional...</td>
+                                        <td><span class="badge badge-ativo">Aprovado</span></td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Hamlet</td>
                                         <td>João Pedro</td>
-                                        <td>
-                                            <div class="stars">
-                                                <span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span>★</span>
-                                            </div>
-                                        </td>
-                                        <td class="comment">Muito bom, mas achei um pouco difícil...</td>
-                                        <td><span class="badge badge-secondary">Pendente</span></td>
+                                        <td><div class="stars"><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span class="star-filled">★</span><span>★</span></div></td>
+                                        <td class="comment">Muito bom, mas achei...</td>
+                                        <td><span class="badge badge-devolvido">Pendente</span></td>
                                         <td>
                                             <div class="action-buttons">
-                                                <button class="btn btn-icon"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></button>
-                                                <button class="btn btn-icon btn-danger"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
                                             </div>
                                         </td>
                                     </tr>
@@ -160,26 +287,162 @@
                 </div>
             </div>
 
-            <div id="tab-multas" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Multas aqui.</p></div></div></div>
-            <div id="tab-clientes" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Clientes aqui.</p></div></div></div>
-            <div id="tab-livros" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Livros aqui.</p></div></div></div>
-            <div id="tab-funcionarios" class="tabs-content"><div class="card"><div class="card-content"><p>Conteúdo da aba de Funcionários aqui.</p></div></div></div>
+            <!-- CONTEÚDO DA ABA: LIVROS -->
+            <div id="tab-livros" class="tabs-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Gerenciar Acervo de Livros</h2>
+                        <div class="actions">
+                            <input type="text" placeholder="Buscar por título, autor ou ISBN..." class="search-input">
+                            <button class="btn btn-gold">Novo Livro</button>
+                            <button class="btn btn-outline">Relatórios</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Livro</th>
+                                        <th>Categoria</th>
+                                        <th>Editora/Ano</th>
+                                        <th>Exemplares</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="subtext">LIV001</div></td>
+                                        <td>Dom Quixote <div class="subtext">Miguel de Cervantes</div></td>
+                                        <td><span class="badge badge-outline">Literatura Clássica</span></td>
+                                        <td>Editora Clássicos <div class="subtext">2020</div></td>
+                                        <td>4 de 5</td>
+                                        <td><span class="badge badge-ativo">Ativo</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="subtext">LIV002</div></td>
+                                        <td>Hamlet <div class="subtext">William Shakespeare</div></td>
+                                        <td><span class="badge badge-outline">Teatro</span></td>
+                                        <td>Shakespeare & Co <div class="subtext">2019</div></td>
+                                        <td>2 de 3</td>
+                                        <td><span class="badge badge-ativo">Ativo</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="subtext">LIV004</div></td>
+                                        <td>1984 <div class="subtext">George Orwell</div></td>
+                                        <td><span class="badge badge-outline">Ficção Científica</span></td>
+                                        <td>Futuro Editora <div class="subtext">2018</div></td>
+                                        <td>0 de 2</td>
+                                        <td><span class="badge badge-indisponivel">Indisponível</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- CONTEÚDO DA ABA: FUNCIONÁRIOS -->
+            <div id="tab-funcionarios" class="tabs-content">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">Gerenciar Funcionários</h2>
+                        <div class="actions">
+                            <input type="text" placeholder="Buscar por nome, ID ou departamento..." class="search-input">
+                            <button class="btn btn-gold">Novo Funcionário</button>
+                            <button class="btn btn-outline">Configurações</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Cargo/Departamento</th>
+                                        <th>Empréstimos Gerenciados</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="subtext">FUNC001</div></td>
+                                        <td>Carlos Roberto Silva</td>
+                                        <td>Bibliotecário Chefe<div class="subtext">Gestão de Acervo</div></td>
+                                        <td><span class="badge badge-outline">25</span></td>
+                                        <td><span class="badge badge-ativo">Ativo</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                     <tr>
+                                        <td><div class="subtext">FUNC002</div></td>
+                                        <td>Ana Paula Costa</td>
+                                        <td>Bibliotecária<div class="subtext">Atendimento ao Cliente</div></td>
+                                        <td><span class="badge badge-outline">18</span></td>
+                                        <td><span class="badge badge-ativo">Ativo</span></td>
+                                        <td>
+                                            <div class="action-buttons">
+                                                <button class="btn btn-icon" title="Editar"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></button>
+                                                <button class="btn btn-icon btn-danger" title="Excluir"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CONTEÚDO DA ABA: MINHAS INFORMAÇÕES -->
             <div id="tab-informacoes" class="tabs-content">
                 <div class="info-grid">
-                    <div class="card">
+                    <div class="card info-card">
                         <div class="card-header"><h2 class="card-title">Informações Pessoais</h2></div>
                         <div class="card-content">
-                            <p><strong>Nome:</strong> Roberto Santos Oliveira</p>
-                            <p><strong>Email:</strong> roberto.admin@biblioteca.com</p>
-                            <p><strong>Cargo:</strong> Administrador do Sistema</p>
-                            <p><strong>Nível de Acesso:</strong> Total</p>
+                            <div class="info-item"><label>Nome</label><p>Roberto Santos Oliveira</p></div>
+                            <div class="info-item"><label>Email</label><p>roberto.admin@biblioteca.com</p></div>
+                            <div class="info-item"><label>Telefone</label><p>(11) 1111-2222</p></div>
+                            <div class="info-item"><label>Matrícula</label><p>ADM001</p></div>
+                            <div class="info-item"><label>Cargo</label><p>Administrador do Sistema</p></div>
+                            <div class="info-item"><label>Nível de Acesso</label><p><span class="badge badge-ativo">Total</span></p></div>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-header"><h2 class="card-title">Configurações do Sistema</h2></div>
-                        <div class="card-content">
-                           <p>Opções e botões para configurar o sistema.</p>
+                        <div class="card-content settings-list" style="display: grid; gap: 0.5rem;">
+                           <button class="btn btn-outline">Configurações Gerais</button>
+                           <button class="btn btn-outline">Políticas de Empréstimo</button>
+                           <button class="btn btn-outline">Configurar Multas</button>
+                           <button class="btn btn-outline">Gerenciar Permissões</button>
+                           <button class="btn btn-outline">Relatórios do Sistema</button>
+                           <button class="btn btn-outline">Backup e Segurança</button>
                         </div>
                     </div>
                 </div>
@@ -190,3 +453,4 @@
     <script src="/assets/js/script.js" defer></script>
 </body>
 </html>
+
